@@ -1,14 +1,13 @@
 # CaC  C24262 Full Stack con Python
-Utilidades para la comisión 24262 del curso de Full stack con Python de Codo a Codo
 
-
-En este repositorio encontrarás material de la cursada para la comisión **#24262** de Desarrollo Full Stack con Python. Conforme avancemos con las clases podrás encontrar:
+En este repositorio encontrarás material de utilidad para la cursada de la comisión **#24262** de Desarrollo Full Stack con Python. Conforme avancemos con las clases podrás encontrar:
 
 - Presentaciones
+- Enlaces de utilidad
 - Códigos de ejemplo
 - Libros y material de apoyo
-- Links compartidos
 - Proyectos que desarrollemos en clase
+- Más! ...
 
 ## Cómo descargar el repositorio?
 
@@ -17,19 +16,13 @@ Si no estas familiarizado con Git, no te preocupes, a lo largo del curso aprende
 ```shell
 git clone https://github.com/lucaslucyk/cac-24262-fullstack-python.git
 ```
-
-o bien, por ssh:
-
-```shell
-git clone git@github.com:lucaslucyk/cac-24262-fullstack-python.git
-```
 ---
 
 ## 🔗 Enlaces útiles para la cursada
 
 #### 💻 Comisión 24262 - Lunes y Miercoles de 19:00 a 20:30 hs
 
-- Instructor/a: **Lucas Lucyk**  
+- Instructor: **Lucas Lucyk**  
 - 📧 Correo: [lucas.lucyk@bue.edu.ar](mailto:lucas.lucyk@bue.edu.ar)
 - 📢 Redes: [Linkedin](https://www.linkedin.com/in/lucaslucyk/) | [GitHub](https://github.com/lucaslucyk)
 
@@ -37,33 +30,31 @@ git clone git@github.com:lucaslucyk/cac-24262-fullstack-python.git
 
 - Tutor: **German Perez**
 - 📧 Correo: [german.perez@bue.edu.ar](mailto:german.perez@bue.edu.ar)
-- ❓ Formulario de Consultas administrativas: [Accedé acá](https://docs.google.com/forms/d/e/1FAIpQLSf6HrPO-iNlEJEW0qZJi6CrwhL--i9YlTdhdjMDBXOdgdrDQg/viewform)
+- ❓ Formulario de Consultas administrativas: [Accedé acá](https://forms.gle/DrLfzZMdiPHoCpAz7)
 
-#### ✅ Formulario de Presentismo
+#### ✅ Formulario de asistencia
 
 > [!WARNING]
 > Disponible únicamente durante el dictado de la clase
 
-[Enlace al Formulario](https://docs.google.com/forms/d/e/1FAIpQLSeFKRssrXDmfrJn-E1LY98IyabejgNZkieFevu_jMbWbYKvSw/viewform?usp=sf_link)
+No olvides dar el presente con el siguiente [Formulario de asistencia](https://docs.google.com/forms/d/e/1FAIpQLSeFKRssrXDmfrJn-E1LY98IyabejgNZkieFevu_jMbWbYKvSw/viewform?usp=sf_link) en cada clase.
 
 #### 📞 Meet
 
-Dictado de la clase sincrónica
-
-[Enlace a Meet](https://meet.google.com/kmu-htak-puu)
+Todas las clases se dictarán mediante Google Meet. Podrás acceder con el siguiente [Enlace](https://meet.google.com/kmu-htak-puu)
 
 #### 📂 Drive
 
-Carpetas con material de clase
-
-[Enlace a Drive](https://drive.google.com/drive/folders/1MwslamtLTuTRviKcyAP3FWa5GmuZyd-P?usp=drive_link)
+En este [Enlace a Drive](https://drive.google.com/drive/folders/1MwslamtLTuTRviKcyAP3FWa5GmuZyd-P?usp=drive_link) encontrarás todo el material de las clases, como presentaciones y demás.
 
 #### 🎬 Lista de reproducción de YouTube
 
-Videos de las clases grabadas
+Podrás acceder a las clases grabadas para despejar cualquier duda.
 
 *Próximamente!*
 
 #### 👥 Discord
+
+En este grupo podrás interactuar con otros alumnos para despejar dudas, realizar consultas y más.
 
 *Próximamente!*
