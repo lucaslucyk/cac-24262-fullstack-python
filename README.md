@@ -22,13 +22,13 @@ git clone https://github.com/lucaslucyk/cac-24262-fullstack-python.git
 
 #### 💻 Comisión 24262 - Lunes y Miercoles de 19:00 a 20:30 hs
 
-- Instructor: **Lucas Lucyk**  
+- 👋 Instructor: **Lucas Lucyk**  
 - 📧 Correo: [lucas.lucyk@bue.edu.ar](mailto:lucas.lucyk@bue.edu.ar)
 - 📢 Redes: [Linkedin](https://www.linkedin.com/in/lucaslucyk/) | [GitHub](https://github.com/lucaslucyk)
 
 #### 🙋 Consultas administrativas
 
-- Tutor: **German Perez**
+- 👋 Tutor: **German Perez**
 - 📧 Correo: [german.perez@bue.edu.ar](mailto:german.perez@bue.edu.ar)
 - ❓ Formulario de Consultas administrativas: [Accedé acá](https://forms.gle/DrLfzZMdiPHoCpAz7)
 
@@ -45,13 +45,11 @@ Todas las clases se dictarán mediante Google Meet. Podrás acceder con el sigui
 
 #### 📂 Drive
 
-En este [Enlace a Drive](https://drive.google.com/drive/folders/1MwslamtLTuTRviKcyAP3FWa5GmuZyd-P?usp=drive_link) encontrarás todo el material de las clases, como presentaciones y demás.
+En este [Enlace](https://drive.google.com/drive/folders/1MwslamtLTuTRviKcyAP3FWa5GmuZyd-P?usp=drive_link) encontrarás todo el material de las clases, como presentaciones y demás.
 
 #### 🎬 Lista de reproducción de YouTube
 
-Podrás acceder a las clases grabadas para despejar cualquier duda.
-
-*Próximamente!*
+Con este [Enlace](https://www.youtube.com/playlist?list=PLFerssPKEjqe2CAgHDUhSRK955O9YISp1) podrás acceder a las clases grabadas para despejar cualquier duda.
 
 #### 👥 Discord
 
