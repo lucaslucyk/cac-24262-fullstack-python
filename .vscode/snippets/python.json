@@ -1,0 +1,42 @@
+{
+	"if(main)": {
+		"prefix": ["__main__", "ifmain", "main", "ifm", "if m"],
+		"body": ["if __name__ == \"__main__\":", "    ${1:pass}"],
+		"description": "Code snippet for a `if __name__ == \"__main__\": ...` block"
+	},
+	"try-except": {
+		"prefix": ["try", "tryexcept", "tre", "try e"],
+		"body": ["try:", "    ${1:pass}", "except Exception:", "    ..."],
+		"description": "Code snippet for a try/except block"
+	},
+	"def __init__(...)": {
+		"prefix": ["__init__", "ddi", "def __i"],
+		"body": ["def __init__(self, *args, **kwargs):", "    ${1:pass}"],
+		"description": "Code snippet for a `def __init__(self, *args, **kwargs): ...` block"
+	},
+	"def __repr__(...)": {
+		"prefix": ["__repr__", "ddr", "def __r"],
+		"body": ["def __repr__(self):", "    ${1:pass}"],
+		"description": "Code snippet for a `def __repr__(self): ...` block"
+	},
+	"def __enter__(...)": {
+		"prefix": ["__enter__", "dde", "def __e"],
+		"body": ["def __enter__(self):", "    ${1:pass}"],
+		"description": "Code snippet for a `def __enter__(self): ...` block"
+	},
+	"def __exit__(...)": {
+		"prefix": ["__exit__", "dde", "def __e"],
+		"body": ["def __exit__(self, *args, **kwargs):", "    ${1:pass}"],
+		"description": "Code snippet for a `def __exit__(self, *args, **kwargs): ...` block"
+	},
+	"async def __aenter__(...)": {
+		"prefix": ["__aenter__", "dda", "async def __a"],
+		"body": ["async def __aenter__(self):", "    ${1:pass}"],
+		"description": "Code snippet for a `async def __aenter__(self): ...` block"
+	},
+	"async def __aexit__(...)": {
+		"prefix": ["__aexit__", "dda", "async def __a"],
+		"body": ["async def __aexit__(self, *args, **kwargs):", "    ${1:pass}"],
+		"description": "Code snippet for a `async def __aexit__(self, *args, **kwargs): ...` block"
+	}
+}

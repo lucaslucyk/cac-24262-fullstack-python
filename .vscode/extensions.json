@@ -1,0 +1,19 @@
+{
+    "recommendations": [
+        "akamud.vscode-theme-onedark",
+        "zhuangtongfa.material-theme",
+        "pkief.material-icon-theme",
+        "ms-vscode.live-server",
+        "formulahendry.auto-rename-tag",
+        "gruntfuggly.todo-tree",
+        "eamodio.gitlens",
+        "esbenp.prettier-vscode",
+        "wallabyjs.console-ninja",
+        "mikestead.dotenv",
+        "dbaeumer.vscode-eslint",
+        "xabikos.javascriptsnippets",
+        "ms-python.black-formatter",
+        "graykode.ai-docstring",
+        "ms-ceintl.vscode-language-pack-es"
+    ]
+}

@@ -1,0 +1,130 @@
+{
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.iconTheme": "material-icon-theme",
+    "git.autofetch": true,
+    "workbench.colorTheme": "One Dark Pro Flat",
+    "json.schemas": [],
+    "[git-commit]": {"editor.rulers": [50]},
+    "[python]": {
+        "editor.rulers": [
+            80,
+            120
+        ],
+        "editor.formatOnType": false,
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "[markdown]": {
+        "editor.rulers": [
+            80,
+            120
+        ],
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        },
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "editor.multiCursorModifier": "ctrlCmd",
+    "gitlens.modes": {
+        "zen": {
+            "name": "Zen",
+            "statusBarItemName": "Zen",
+            "description": "for a zen-like experience, disables many visual features",
+            "codeLens": false,
+            "currentLine": false,
+            "hovers": false,
+            "statusBar": false
+        },
+        "review": {
+            "name": "Review",
+            "statusBarItemName": "Reviewing",
+            "description": "for reviewing code, enables many visual features",
+            "codeLens": true,
+            "currentLine": true,
+            "hovers": true
+        }
+    },
+    "markdown-preview-enhanced.previewTheme": "one-dark.css",
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "settingsSync.ignoredExtensions": [
+        "ms-toolsai.jupyter",
+        "ms-python.python"
+    ],
+    "python.defaultInterpreterPath": "python3",
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "python.analysis.autoImportCompletions": true,
+    "files.associations": {
+        "*.html": "html"
+    },
+    "explorer.confirmDelete": false,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "[django-html]": {
+
+    },
+    "git.ignoreRebaseWarning": true,
+    "auto-rename-tag.activationOnLanguage": [
+        "*"
+    ],
+    "workbench.colorCustomizations": {
+        "statusBar.background" : "#1A1A1A",
+        "statusBar.noFolderBackground" : "#212121",
+        "statusBar.debuggingBackground": "#263238"
+    },
+    "editor.guides.indentation": false,
+    "indenticator.width": 0.1,
+    "indenticator.color.dark": "rgba(255,255,255,0.15)",
+    "indenticator.color.light": "rgba(0,0,0,0.15)",
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "'Cascadia Code', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.linkedEditing": true,
+    "black-formatter.args": [
+        "--line-length=80 "
+    ],
+    "yapf.args": [
+        "--style={based_on_style: yapf, indent_width: 4}"
+    ],
+    "[yaml]": {
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[yml]": {
+        "editor.tabSize": 2
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.rulers": [
+            80,
+            120
+        ],
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "console-ninja.featureSet": "Community",
+    "workbench.sideBar.location": "left",
+    "livePreview.notifyOnOpenLooseFile": false,
+    "livePreview.portNumber": 3333,
+    "livePreview.defaultPreviewPath": "index.html",
+    "editor.stickyScroll.enabled": true,
+}
