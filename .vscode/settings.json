@@ -127,4 +127,7 @@
     "livePreview.portNumber": 3333,
     "livePreview.defaultPreviewPath": "index.html",
     "editor.stickyScroll.enabled": true,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 }
