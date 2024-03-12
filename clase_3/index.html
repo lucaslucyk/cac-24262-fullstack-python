@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio de pelis</title>
+</head>
+<body>
+
+    <!-- Agrupamos el contenido de la página con la estructura header/main/footer -->
+    <header>
+        <h1>Sitio de pelis</h1>
+        <nav>
+            <!-- enlace interno que busca un elemento html con el id "tendencias" -->
+            <a href="#tendencias">Tendencias</a>
+            
+            <!-- Enlace externo. Lo abre en una nueva pestaña -->
+            <a 
+                href="https://developer.themoviedb.org/docs/getting-started"
+                target="_blank"
+                rel="noreferrer"
+            >Docs</a>
+
+            <!-- Enlace/ruta relativa. Abre otra página de nuestro sitio -->
+            <a href="/clase_3/signin.html">Ingresar</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="search">
+            <h2>Buscar una peli</h2>
+            <input type="text">
+        </section>
+
+        <section>
+            <h2 id="tendencias">Tendencias</h2>
+
+            <!--
+                Tratamos de no utilizar divs para agrupar contenido siempre que sea posible y tenga sentido
+                Buscaos que el contenido respecte una estructura semántica para evitar problemas de accesibilidad en niveles jerárquicos
+            <div>
+                <h3>The Knick</h3>
+                <img 
+                    src="https://pics.filmaffinity.com/The_Knick_Serie_de_TV-533835400-large.jpg"
+                    alt="portada de the Knick"
+                    height="200"
+                    >
+                <button>Ver</button>
+            </div>
+            <div>
+                <h3>Trackers</h3>
+                <img 
+                    src="/clase_3/recursos/trackers.jpeg"
+                    alt="portada de the trackers"
+                    height="200"
+                    >
+                <button>Ver</button>
+            </div> -->
+            
+
+            <!-- En este caso, cambiamos los div por article -->
+            <article>
+                <!-- Volvemos a utiliza una estructura general (header/main/footer) para describir mejor el contenido del article -->
+                <header>
+                    <h3>The Knick</h3>
+                </header>
+                <main>
+                    <img 
+                        src="https://pics.filmaffinity.com/The_Knick_Serie_de_TV-533835400-large.jpg"
+                        alt="portada de the Knick"
+                        height="200"
+                        >
+                </main>
+                <footer>
+                    <button>Ver</button>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h3>Tackers</h3>
+                </header>
+                <main>
+                    <img 
+                        src="/clase_3/recursos/trackers.jpeg"
+                        alt="portada de the trackers"
+                        height="200"
+                        >
+                </main>
+                <footer>
+                    <button>Ver</button>
+                </footer>
+            </article>
+
+        </section>
+    </main>
+    
+    <footer><small>Copyright 2024 - Codo a Codo</small></footer>
+
+</body>
+</html>
