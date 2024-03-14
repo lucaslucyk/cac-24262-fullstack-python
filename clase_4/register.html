@@ -1,71 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro</title>
-</head>
-<body style="background-color: #0e0e0e; color: #f1f1f1; zoom:120%">
+  </head>
+  <body style="background-color: #0e0e0e; color: #f1f1f1; zoom: 120%">
     <header></header>
     <main>
+      <section>
+        <h2>Formulario de registro</h2>
 
-        <section>
-            <h2>Formulario de registro</h2>   
-            
-            
-            <form action="/clase_4/register.html" method="post">
+        <!-- se crea un formulario de registro con `form` -->
+        <form action="/clase_4/register.html" method="post">
+          <!-- agrupamos los datos con fieldset -->
+          <fieldset>
+            <!-- título del grupo -->
+            <legend>Información personal</legend>
 
-                <fieldset>
-                    <legend>Información personal</legend>
-                    
+            <!-- label e input trabajan juntos para crear un nuevo campo
+                usamos `for` en label para que reconozca al input al que pertenece mediante su `id` -->
+            <label for="firstname">Nombre:</label>
+            <input
+              id="firstname"
+              name="firstname"
+              type="text"
+              placeholder="Lucas"
+            />
 
-                    <label for="firstname">Nombre:</label>
-                    <input 
-                        id="firstname"
-                        name="firstname"
-                        type="text"
-                        placeholder="Lucas"
-                        >
+            <label for="lastname">Apellido:</label>
+            <input
+              placeholder="Lucyk"
+              id="lastname"
+              name="lastname"
+              type="text"
+            />
 
+            <div>
+              <label for="email">Email:</label>
+              <!-- input de tipo email. valida que lo que se ingrese posea un @ -->
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="lucas.lucyk@bue.edu.ar"
+              />
+            </div>
 
-                    <label for="lastname">Apellido:</label>
-                    <input placeholder="Lucyk" id="lastname" name="lastname" type="text">
+            <div>
+              <label for="tel">Teléfono:</label>
+              <!-- carga el teclado numérico en dispositivos móviles y verifica que el formato coincida con el `pattern` -->
+              <input type="tel" name="tel" id="tel" pattern="[0-9]{10}" />
+            </div>
 
+            <div>
+              <!-- un campo de valor numérico -->
+              <label for="age">Edad:</label>
+              <input type="number" name="age" id="age" min="18" max="120" />
+            </div>
 
-                    <div>
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" id="email" placeholder="lucas.lucyk@bue.edu.ar">
-                    </div>
-
-                    <div>
-                        <label for="tel">Teléfono:</label>
-                        <input type="tel" name="tel" id="tel"
-                            pattern="[0-9]{10}"
-                        >
-                    </div>
-
-                    <div>
-                        <label for="age">Edad:</label>
-                        <input type="number" name="age" id="age"
-                            min="18" max="120"
-                        >
-                    </div>
-
-
-                    <div>
-                        <label for="password">Contraseña:</label>
-                        <input type="password" name="password" id="password">
-                    </div>
-
-                </fieldset>
-                
-
-            </form>
-
-
-        </section>
-
+            <div>
+              <!-- un campo de tipo texto, pero en el navegador no se muestran los caracteres y se reemplazan los mismos por * o similar -->
+              <label for="password">Contraseña:</label>
+              <input type="password" name="password" id="password" />
+            </div>
+          </fieldset>
+        </form>
+      </section>
     </main>
     <footer><small>Hecho con ❤️ en clase</small></footer>
-</body>
+  </body>
 </html>

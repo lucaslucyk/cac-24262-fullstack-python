@@ -1,95 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body style="background-color: #0e0e0e; color: #f1f1f1; zoom:120%">
+  </head>
+  <body style="background-color: #0e0e0e; color: #f1f1f1; zoom: 120%">
     <header>
-        <h1>Sitio de pelis</h1>
-        <nav>
-            <!-- enlace interno que busca un elemento html con el id "tendencias" -->
-            <a href="/clase_4/index.html">Tendencias</a>
+      <h1>Sitio de pelis</h1>
+      <nav>
+        <!-- enlace interno que busca un elemento html con el id "tendencias" -->
+        <a href="/clase_4/index.html">Tendencias</a>
 
-            <!-- Enlace externo. Lo abre en una nueva pestaña -->
-            <a
-            href="https://developer.themoviedb.org/docs/getting-started"
-            target="_blank"
-            rel="noreferrer"
-            >Docs</a
-            >
+        <!-- Enlace externo. Lo abre en una nueva pestaña -->
+        <a
+          href="https://developer.themoviedb.org/docs/getting-started"
+          target="_blank"
+          rel="noreferrer"
+          >Docs</a
+        >
 
-            <!-- Enlace/ruta relativa. Abre otra página de nuestro sitio -->
-            <a href="/clase_3/signin.html">Ingresar</a>
-        </nav>
+        <!-- Enlace/ruta relativa. Abre otra página de nuestro sitio -->
+        <a href="/clase_3/signin.html">Ingresar</a>
+      </nav>
     </header>
 
     <main>
-        <section>
-            <h2>The Knick</h2>
+      <!-- título de la película con su imagen -->
+      <section>
+        <h2>The Knick</h2>
 
-            <img height="300" src="https://pics.filmaffinity.com/The_Knick_Serie_de_TV-533835400-large.jpg" alt="portada de The knick con el personaje en el centro, ropa blanca..">
+        <img
+          height="300"
+          src="https://pics.filmaffinity.com/The_Knick_Serie_de_TV-533835400-large.jpg"
+          alt="portada de The knick con el personaje en el centro, ropa blanca.."
+        />
 
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos ratione necessitatibus ipsa laudantium. Incidunt, illum doloremque aliquam dicta reiciendis ex, ducimus ipsa deserunt libero doloribus cumque a hic sunt soluta?</p>
-        </section>
+        <!-- texto autogenerado para simular la descripción -->
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos ratione
+          necessitatibus ipsa laudantium. Incidunt, illum doloremque aliquam
+          dicta reiciendis ex, ducimus ipsa deserunt libero doloribus cumque a
+          hic sunt soluta?
+        </p>
+      </section>
 
-        <section>
-            <h2>Trailer</h2>
+      <!-- trailer video -->
+      <section>
+        <h2>Trailer</h2>
 
-            <iframe style="max-width: 100%; aspect-ratio: 16/9;" width="560" height="315" src="https://www.youtube.com/embed/z9rKY8MLWTU?si=3UBj7wCZGbuJX4lo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </section>
+        <!-- Usamos un video de youtube insertado en nuestra página mediante un `iframe`.
+            Podemos utilizar cualquier sitio web como valor del atributo `src`, pero recordar que no todas permiten ser insertadas en sitios externos. 
+            utilizamos un estilo en línea con el atributo `style` para que la inserción no tenga errores de visualización en responsive/mobile -->
+        <iframe
+          style="max-width: 100%; aspect-ratio: 16/9"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/z9rKY8MLWTU?si=3UBj7wCZGbuJX4lo"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </section>
 
-        <section>
-            <h2>Detalles/info</h2>
+      <!-- detalles e info -->
+      <section>
+        <h2>Detalles e información adicional</h2>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th colspan="2">Info</th>
-                        <!-- <th>valor</th> -->
-                    </tr>
-                </thead>
+        <!-- creamos una tabla para mostrar información -->
+        <table>
+          <!-- cabecera de la tabla -->
+          <thead>
+            <!-- una fila (row) -->
+            <tr>
+              <!-- Una columna con estilos de cabecera (centrado, negrita, tamaño de fuente, etc)
+                (th = columna cabecera) 
+                utilizamos el atributo colspan para indicar la cantidad de columnas que debe ocupar nuestra columna -->
+              <th colspan="2">Info</th>
+              <!-- <th>valor</th> -->
+            </tr>
+          </thead>
 
-                <tbody>
-                    <tr>
-                        <td>presupuesto</td>
-                        <td>U$D 1.000.000</td>
-                    </tr>
-                    <tr>
-                        <td>Ganancias</td>
-                        <td>U$D 20.000.000</td>
-                    </tr>
-                </tbody>
+          <!-- cuerpo de la tabla -->
+          <tbody>
+            <!-- nueva fila -->
+            <tr>
+              <!-- columna 1 -->
+              <td>presupuesto</td>
+              <!-- columna 2 -->
+              <td>U$D 1.000.000</td>
+            </tr>
 
-            </table>
+            <!-- nueva fila -->
+            <tr>
+              <!-- columna 1 -->
+              <td>Ganancias</td>
+              <!-- columna 2 -->
+              <td>U$D 20.000.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-        </section>
+      <!-- recursos -->
+      <section>
+        <h2>Recursos</h2>
 
-        <section>
-            <h2>Recursos</h2>
+        <div>
+          <h3>Escenas</h3>
 
-            <div>
-                <h3>Escenas</h3>
+          <!-- insertamos un video desde nuestro servidor con un enlace relativo
+            controls: muestra los controles para interactuar con el video. Dependen del navegador
+            autoplay: comienza a reproducir el video automáticamente
+            muted: mutea el video por defecto para que funciona la reproducción automática
+            loop: reproduce el video infinitamente -->
+          <video
+            src="/clase_4/recursos/ardilla.mp4"
+            width="500"
+            controls
+            autoplay
+            muted
+            loop
+            style="max-width: 100%; aspect-ratio: 16/9"
+          ></video>
 
-                <video 
-                    src="/clase_4/recursos/ardilla.mp4"
-                    width="500"
-                    controls
-                    autoplay
-                    muted
-                    loop
-                    style="max-width: 100%; aspect-ratio: 16/9;"
-                    ></video>
-
-                <h3>Soundtrack</h3>
-                <audio controls loop src="/clase_4/recursos/sword.mp3"></audio>
-            </div>
-            <div></div>
-        </section>
-
+          <h3>Soundtrack</h3>
+          <audio controls loop src="/clase_4/recursos/sword.mp3"></audio>
+        </div>
+        <div></div>
+      </section>
     </main>
 
     <footer><small>Copyright 2024 - Codo a Codo</small></footer>
-</body>
+  </body>
 </html>
