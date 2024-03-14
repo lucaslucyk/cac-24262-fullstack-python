@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body style="background-color: #0e0e0e; color: #f1f1f1; zoom:120%">
+    <header></header>
+    <main>
+
+        <section>
+            <h2>Formulario de registro</h2>   
+            
+            
+            <form action="/clase_4/register.html" method="post">
+
+                <fieldset>
+                    <legend>Información personal</legend>
+                    
+
+                    <label for="firstname">Nombre:</label>
+                    <input 
+                        id="firstname"
+                        name="firstname"
+                        type="text"
+                        placeholder="Lucas"
+                        >
+
+
+                    <label for="lastname">Apellido:</label>
+                    <input placeholder="Lucyk" id="lastname" name="lastname" type="text">
+
+
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="lucas.lucyk@bue.edu.ar">
+                    </div>
+
+                    <div>
+                        <label for="tel">Teléfono:</label>
+                        <input type="tel" name="tel" id="tel"
+                            pattern="[0-9]{10}"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="age">Edad:</label>
+                        <input type="number" name="age" id="age"
+                            min="18" max="120"
+                        >
+                    </div>
+
+
+                    <div>
+                        <label for="password">Contraseña:</label>
+                        <input type="password" name="password" id="password">
+                    </div>
+
+                </fieldset>
+                
+
+            </form>
+
+
+        </section>
+
+    </main>
+    <footer><small>Hecho con ❤️ en clase</small></footer>
+</body>
+</html>

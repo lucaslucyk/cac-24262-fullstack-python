@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #0e0e0e; color: #f1f1f1; zoom:120%">
+    <header>
+        <h1>Sitio de pelis</h1>
+        <nav>
+            <!-- enlace interno que busca un elemento html con el id "tendencias" -->
+            <a href="/clase_4/index.html">Tendencias</a>
+
+            <!-- Enlace externo. Lo abre en una nueva pestaña -->
+            <a
+            href="https://developer.themoviedb.org/docs/getting-started"
+            target="_blank"
+            rel="noreferrer"
+            >Docs</a
+            >
+
+            <!-- Enlace/ruta relativa. Abre otra página de nuestro sitio -->
+            <a href="/clase_3/signin.html">Ingresar</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>The Knick</h2>
+
+            <img height="300" src="https://pics.filmaffinity.com/The_Knick_Serie_de_TV-533835400-large.jpg" alt="portada de The knick con el personaje en el centro, ropa blanca..">
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos ratione necessitatibus ipsa laudantium. Incidunt, illum doloremque aliquam dicta reiciendis ex, ducimus ipsa deserunt libero doloribus cumque a hic sunt soluta?</p>
+        </section>
+
+        <section>
+            <h2>Trailer</h2>
+
+            <iframe style="max-width: 100%; aspect-ratio: 16/9;" width="560" height="315" src="https://www.youtube.com/embed/z9rKY8MLWTU?si=3UBj7wCZGbuJX4lo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+
+        <section>
+            <h2>Detalles/info</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Info</th>
+                        <!-- <th>valor</th> -->
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>presupuesto</td>
+                        <td>U$D 1.000.000</td>
+                    </tr>
+                    <tr>
+                        <td>Ganancias</td>
+                        <td>U$D 20.000.000</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <section>
+            <h2>Recursos</h2>
+
+            <div>
+                <h3>Escenas</h3>
+
+                <video 
+                    src="/clase_4/recursos/ardilla.mp4"
+                    width="500"
+                    controls
+                    autoplay
+                    muted
+                    loop
+                    style="max-width: 100%; aspect-ratio: 16/9;"
+                    ></video>
+
+                <h3>Soundtrack</h3>
+                <audio controls loop src="/clase_4/recursos/sword.mp3"></audio>
+            </div>
+            <div></div>
+        </section>
+
+    </main>
+
+    <footer><small>Copyright 2024 - Codo a Codo</small></footer>
+</body>
+</html>

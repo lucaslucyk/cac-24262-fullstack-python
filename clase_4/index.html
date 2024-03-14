@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Sitio de pelis</title>
+  </head>
+  <body style="background-color: #0e0e0e; color: #f1f1f1; zoom:120%">
+    <!-- Agrupamos el contenido de la página con la estructura header/main/footer -->
+    <header>
+      <h1>Sitio de pelis</h1>
+      <nav>
+        <!-- enlace interno que busca un elemento html con el id "tendencias" -->
+        <a href="#tendencias">Tendencias</a>
+
+        <!-- Enlace externo. Lo abre en una nueva pestaña -->
+        <a
+          href="https://developer.themoviedb.org/docs/getting-started"
+          target="_blank"
+          rel="noreferrer"
+          >Docs</a
+        >
+
+        <!-- Enlace/ruta relativa. Abre otra página de nuestro sitio -->
+        <a href="/clase_4/register.html">Registro</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="search">
+        <h2>Buscar una peli</h2>
+        <input type="text" >
+      </section>
+
+      <section>
+        <h2 id="tendencias">Tendencias</h2>
+
+        <!-- En este caso, cambiamos los div por article -->
+        <article>
+          <!-- Volvemos a utiliza una estructura general (header/main/footer) para describir mejor el contenido del article -->
+          <header>
+            <h3>The Knick</h3>
+          </header>
+          <div>
+            <img
+              src="https://pics.filmaffinity.com/The_Knick_Serie_de_TV-533835400-large.jpg"
+              alt="portada de the Knick"
+              height="200"
+            >
+          </div>
+          <footer>
+            <a href="/clase_4/detail.html">Ver</a>
+          </footer>
+        </article>
+        <article>
+          <header>
+            <h3>Tackers</h3>
+          </header>
+          <div>
+            <img
+              src="/clase_3/recursos/trackers.jpeg"
+              alt="portada de the trackers"
+              height="200"
+            >
+          </div>
+          <footer>
+            <button>Ver</button>
+          </footer>
+        </article>
+      </section>
+      <section id="otras">
+        <dl>
+          <dt>Pelis</dt>
+          <dd>Titanic</dd>
+          <dd>La lista de Schindler</dd>
+          <dd>El viaje de Chihiro</dd>
+          
+          
+          <dt>Series</dt>
+          <dd>Game of thrones</dd>
+          <dd>Los simpsons</dd>
+        </dl>
+      </section>
+    </main>
+
+    <footer><small>Copyright 2024 - Codo a Codo</small></footer>
+  </body>
+</html>
