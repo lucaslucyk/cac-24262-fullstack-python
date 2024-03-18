@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
+  </head>
+  <body style="background-color: #0e0e0e; color: #f1f1f1; zoom: 120%">
+    <header>
+      <h1>Sitio de pelis</h1>
+      <nav>
+        <!-- enlace interno que busca un elemento html con el id "tendencias" -->
+        <a href="#tendencias">Tendencias</a>
+
+        <!-- Enlace externo. Lo abre en una nueva pestaña -->
+        <a
+          href="https://developer.themoviedb.org/docs/getting-started"
+          target="_blank"
+          rel="noreferrer"
+          >Docs</a
+        >
+
+        <!-- Enlace/ruta relativa. Abre otra página de nuestro sitio -->
+        <a href="/clase_5/register.html">Registro</a>
+      </nav>  
+    </header>
+    
+    <main>
+      <section>
+        <h2>Formulario de registro</h2>
+
+        <!-- se crea un formulario de registro con `form` -->
+        <form action="/clase_5/register.html" method="post">
+          <!-- agrupamos los datos con fieldset -->
+          <fieldset>
+            <!-- título del grupo -->
+            <legend>Información personal</legend>
+
+            <!-- label e input trabajan juntos para crear un nuevo campo
+                usamos `for` en label para que reconozca al input al que pertenece mediante su `id` -->
+            <label for="firstname">Nombre:</label>
+            <input
+              id="firstname"
+              name="firstname"
+              type="text"
+              placeholder="Lucas"
+              required
+            />
+
+            <label for="lastname">Apellido:</label>
+            <input
+              placeholder="Lucyk"
+              id="lastname"
+              name="lastname"
+              type="text"
+              required
+            />
+
+            
+            
+            <div>
+              <!-- un campo de valor numérico -->
+              <label for="age">Edad:</label>
+              <input placeholder="18" type="number" name="age" id="age" min="18" max="120" />
+            </div>
+            
+
+            <div>
+              <label for="country">País:</label>
+
+              <select name="country" id="country" required>
+                <option value="">Selecciona un país</option>
+                <option value="AR">Argentina</option>
+                <option value="UR">Uruguay</option>
+                <option value="BR">Brasil</option>
+                <option value="CH">Chile</option>
+              </select>
+            </div>
+
+
+          </fieldset>
+          
+          <fieldset>
+            <legend>Información de contacto</legend>
+            <div>
+              <label for="email">Email:</label>
+              <!-- input de tipo email. valida que lo que se ingrese posea un @ -->
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="lucas.lucyk@bue.edu.ar"
+              />
+            </div>
+            <div>
+              <label for="tel">Teléfono:</label>
+              <!-- carga el teclado numérico en dispositivos móviles y verifica que el formato coincida con el `pattern` -->
+              <input type="tel" name="tel" id="tel" pattern="[0-9]{10}" />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Seguridad</legend>
+            <div>
+              <!-- un campo de tipo texto, pero en el navegador no se muestran los caracteres y se reemplazan los mismos por * o similar -->
+              <label for="password">Contraseña:</label>
+              <input type="password" name="password" id="password" />
+            </div>
+
+            <div>
+              <label for="password2">Repite la Contraseña:</label>
+              <input type="password" name="password2" id="password2" />
+            </div>
+
+          </fieldset>
+          
+          <fieldset>
+            <legend>Otros</legend>
+
+            <input type="checkbox" required name="terms" id="terms">
+            <label for="terms">Acepto los <a href="">términos y condiciones</a></label>
+          </fieldset>
+          
+          <input type="submit" name="input-confirm" value="Confirmar con botón">
+          <button type="submit">Enviar con botón</button>
+
+        </form>
+      </section>
+    </main>
+    <footer><small>Hecho con ❤️ en clases de Codo a Codo</small></footer>
+  </body>
+</html>
