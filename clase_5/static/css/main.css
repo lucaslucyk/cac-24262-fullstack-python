@@ -1,0 +1,31 @@
+body {
+  background-color: #1d1d1d; /*esto es un comentario css*/
+
+  color: #dadada;
+  /* color: rgb(255 255 255 / 80%); */
+  /* color: hsl(175, 68%, 69%); */
+  /* color: oklch(80% 0.2004 118.59); */
+  /* color: hwb(175 48% 10%); */
+
+  zoom: 100%;
+}
+
+.link {
+  /* color: purple; */
+}
+/*  */
+#external-docs {
+  color: orange;
+}
+
+a {
+  /* color: blue; */
+}
+
+/* A.B.C
+
+    #id
+    .class
+    tag
+  
+  */
