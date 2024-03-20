@@ -1,0 +1,37 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: red; */
+    margin: 0;
+
+    /* background-image: url('https://s1.eestatic.com/2021/05/11/curiosidades/significado/580453282_184851281_1706x960.jpg'); */
+
+    /* background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover; */
+}
+
+
+.container {
+    background-color: blue;
+    width: 50%;
+    height: 50%;
+
+    /* display: none; */
+}
+
+.container  div {
+    background-color: red;
+    color: white;
+/* 
+    width: 70%; */
+}
+
+.sample{
+    color: #6eb07e;
+    color: oklch(70% 0.1 151);
+
+    background-color: rgba(23, 23, 24);
+    background-image: url('https://s1.eestatic.com/2021/05/11/curiosidades/significado/580453282_184851281_1706x960.jpg');
+}
+
