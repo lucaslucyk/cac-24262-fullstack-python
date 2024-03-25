@@ -1,0 +1,35 @@
+/*
+span {
+    background: blue;
+    width: 300px;
+}
+
+p {
+    background-color: blue;
+} */
+
+.box {
+    background-color: blue;
+    font-size: 50px;
+
+    border: 5px solid red;
+    padding: 10px;
+    margin: 5px;
+
+    width: 150px;
+    height: 150px;
+
+
+    box-sizing: content-box; /* default por retrocompatibilidad */
+
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-overflow: '>';
+}
+
+
