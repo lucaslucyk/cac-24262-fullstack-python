@@ -1,0 +1,105 @@
+body {
+    background-color: #222;
+    color: #d6d6d6;
+}
+
+/* p, h2, a {
+    color: yellow;
+}
+
+
+section p {
+    color: red
+}
+
+section > p {
+    text-decoration: dashed underline blue;
+}
+
+
+div + p {
+    color: aqua;
+}
+
+
+div ~ p {
+    color: orange;
+} */
+
+
+
+.pseudoclass p:first-child {
+    color: red;
+}
+
+
+.pseudoclass p:last-child {
+    color: blue;
+}
+
+
+.pseudoclass p:nth-child(3) {
+    color: green;
+}
+
+.pseudoclass p:nth-child(even){
+    background-color: lightgreen;
+    color: black;
+}
+
+
+.pseudoclass p:nth-child(odd){
+    background-color: lightcoral;
+    color: white;
+}
+
+
+.anchors a:link {
+    color: red;
+}
+
+.anchors a:visited {
+    color: green;
+}
+
+.anchors a:active, .anchors a:hover {
+    background-color: blue;
+}
+
+.anchors a:active {
+    color: yellow;
+}
+
+
+.pseudoelements {
+    width: 200px;
+}
+
+.pseudoelements p::first-letter {
+    color: red;
+}
+
+
+.pseudoelements p::first-line {
+    background-color: blue;
+}
+
+
+.pseudoelements p::selection {
+    background-color: darkcyan;
+    color: black;
+}
+
+.pseudoelements p::after{
+    content: "👶";
+    background-color: green;
+}
+
+.pseudoelements p::before{
+    content: "👴";
+    background-color: red;
+}
+
+.pseudoelements p:hover::before {
+    content: "💲";
+}

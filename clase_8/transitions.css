@@ -1,0 +1,31 @@
+body {
+    background-color: #222;
+    color: #d6d6d6;
+}
+
+div {
+    width: 250px;
+    height: 250px;
+}
+
+.transitions {
+    /* transition-property: color, background-color;
+
+
+    transition-duration: 
+
+    transition-timing-function: linear | ease | ease-in | ease-out | ease-in-out | cubic-bezier(n,n,n,n); */
+
+    /* transition: prop duration timing-function delay; */
+
+    background-color: blueviolet;
+    color: white;
+
+    transition: all 1s cubic-bezier( 0.1, 0.46, 0.93, 0.02 ) 0.5s;
+}
+
+.transitions:hover {
+    background-color: red;
+    color: blue;
+}
+

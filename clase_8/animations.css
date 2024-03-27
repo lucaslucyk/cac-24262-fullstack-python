@@ -1,0 +1,63 @@
+body {
+    background-color: #222;
+    color: #d6d6d6;
+}
+
+div {
+    width: 250px;
+    height: 250px;
+    background-color: red;
+}
+
+
+
+@keyframes changeBackground {
+    from {
+        background-color: red;   
+    }
+    to {
+        background-color: blue;
+    }
+}
+
+@keyframes changeFontSize {
+    0% {font-size: small;}
+    25% {font-size: large;}
+    50% {font-size: medium;}
+    100% {font-size: xx-large;}
+}
+
+.animations {
+    /* animation-name: changeBackground;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-play-state: running; */
+
+
+    /* animation:
+        changeBackground
+        1s
+        ease-in
+        1s
+        4
+        normal
+        forwards
+        running,
+        
+        changeFontSize
+        1s
+        ease-in
+        1s
+        4
+        alternate
+        forwards
+        running; */
+
+    /* animate.css*/
+
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
