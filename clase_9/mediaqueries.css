@@ -1,0 +1,44 @@
+body {
+    background: #222;
+}
+
+.sample {
+    padding: 20px;
+    color: white;
+    border: 3px solid red;
+}
+
+@media screen and (max-width: 600px) {
+    .sample {
+        background: blue;
+    }
+    p {
+        color: red;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .sample {
+        background: red;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .sample {
+        background: green;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .sample {
+        background: orange;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .sample {
+        background: pink;
+        color: #222;
+    }
+}

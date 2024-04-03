@@ -1,0 +1,70 @@
+body {
+    background: #222;
+    color: white;
+}
+
+.flexbox-parent {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: row; /* default */
+
+    direction: rtl;
+    direction: ltr; /* default */
+
+    /* writing-mode: vertical-rl; */
+
+
+    width: 350px;
+    border: 3px solid red;
+
+
+    flex-wrap: nowrap; /* default */
+    flex-wrap: wrap;
+
+    flex-flow: row wrap;
+
+}
+
+.flexbox-child {
+    background: yellow;
+    border: 3px solid orange;
+    color: black;
+    /* width: 100px; */
+
+    height: 100px;
+
+    /* margin: 10px; */
+
+    box-sizing: border-box;
+
+    /* display: block; */
+
+    flex-grow: 1; /* Los elementos pueden crecer */
+    flex-basis: 0; /* tamaño base por defecto */
+    flex-shrink: 1; /* Los elementos pueden reducir su tamaño -por debajo del flex basis- */
+
+    flex: auto; /* rellena el flex padre con ancho automático -basado en el contenido- */
+    flex: 1; /* rellena el flex padre con el mismo ancho para todos los elementos */
+
+
+
+}
+
+.flexbox-child:first-child {
+    background: green;
+    flex: 2;
+    order: 2;
+}
+
+.flexbox-child:nth-child(2) {
+    order: 1;
+}
+
+.flexbox-child:last-child {
+    background-color: red;
+    flex: 2;
+    order: 3;
+}
+
