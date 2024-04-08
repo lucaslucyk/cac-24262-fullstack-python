@@ -1,0 +1,37 @@
+.container {
+    height: 500px;
+    background-color: lightsalmon;
+    border: 3px solid black;
+
+    display: grid;
+
+    grid-auto-rows: 50px;
+    grid-template-columns: repeat(3, 150px);
+    gap: 5px;
+
+
+    /* justify-items: center;
+    align-items: center; */
+
+    justify-content: center;
+    align-content: center;
+}
+
+.item {
+    background-color: lightblue;
+    border: 2px solid black;
+    border-radius: 5px;
+    /* width: 20px;
+    height: 20px; */
+}
+
+/* .item:first-child {
+    justify-self: end;
+    align-self: end;
+}
+
+
+
+.item:nth-child(5) {
+    justify-self: start;
+} */

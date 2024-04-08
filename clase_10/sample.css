@@ -1,0 +1,41 @@
+body{
+    height: 95vh;
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr) 4fr;
+}
+
+aside {
+    background-color: lightcoral;
+}
+
+main {
+    background-color: lightgreen;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.movies {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    column-gap: 5px;
+    row-gap: 10px;
+    grid-template-columns: 1fr;
+}
+
+@media (width > 350px) {
+    .movies {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (width > 500px) {
+    .movies {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
