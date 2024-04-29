@@ -15,6 +15,6 @@
         "ms-python.black-formatter",
         "graykode.ai-docstring",
         "ms-ceintl.vscode-language-pack-es",
-        "centuplex.quokka"
+        "wallabyjs.quokka-vscode"
     ]
 }
