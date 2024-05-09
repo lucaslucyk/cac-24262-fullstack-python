@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Formulario</h2>
+
+
+    <form action="" method="post">
+        
+        <label for="tel">Tel</label>
+        <input required type="text" name="tel" id="tel" pattern="\+?54[- ]?[0-9]{2,3}[- ]?[0-9]{4}[- ]?[0-9]{4}$" />
+
+
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" placeholder="username">
+
+
+        <button>Submit</button>
+
+        <script>
+
+            const form = document.querySelector('button');
+            form.addEventListener("click", (event) => {
+                // event.preventDefault();
+
+                // agregar validaciones
+
+            })
+        </script>
+    </form>
+</body>
+</html>
