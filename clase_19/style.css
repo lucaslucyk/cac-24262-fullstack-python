@@ -1,0 +1,47 @@
+#sample {
+    color: yellow;
+}
+
+.pseudoclass li:hover {
+    color: blue;
+}
+
+.pseudoclass li:first-child {
+    color: yellow;
+}
+
+.pseudoclass li:nth-child(2) {
+    color: red;
+}
+
+.pseudoclass li::before {
+    content: "👋";
+}
+
+.lorem:first-line {
+    text-transform: uppercase;
+}
+
+.lorem:first-letter {
+    font-size: 2em;
+}
+
+.absolutas {
+    background-color: blue;
+
+    width: 200px;
+    height: 150px;
+
+    margin: 10px 5px 15px 20px;
+    padding: 50px 5px 15px 20px;
+}
+
+.relativas {
+    background-color: beige;
+    color: black;
+
+    width: 50%;
+    height: 15vh;
+}
+
+

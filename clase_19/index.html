@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso</title>
+
+    <style>
+        * {
+            background-color: #222;
+            color: white;
+        }
+
+        .static {
+            position: static;
+        }
+        .relative {
+            position: relative;
+        }
+        .absolute {
+            position: absolute;
+        }
+        /* .fixed {
+            position: fixed;
+        } */
+        .sticky {
+            position: sticky;
+        }
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Respaso de Front (HTML, CSS, JS)</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pepe</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Carlos</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td colspan="2" >Juan Lorem ipsum dolor sit amet.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <p>Lorem ipsum <span style="color: red;"">dolor</span> dolor sit amet.</p>
+    <hr>
+
+    <h3>Listas Ordenadas</h3>
+
+    <ol>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ol>
+
+
+    <h3>Listas Desordenadas</h3>
+
+    <ul>
+        <li>Elemento 1</li>
+        <ul>
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+        </ul>
+        <li>Elemento 3</li>
+    </ul>
+
+    <h2>Formularios</h2>
+
+    <form action="" method="post">
+        
+        <label for="username">Username</label>
+        <input type="tel" name="username" id="username" placeholder="username">
+    
+        <label for="frutas">Frutas</label>
+        <select name="frutas" id="frutas">
+            <option value="">Seleccionar una fruta</option>
+            <option value="manzana">Manzana</option>
+            <option value="pera">Pera</option>
+            <option value="banana">Banana</option>
+        </select>
+    </form>
+
+    <div>
+        <p>Esto es un parrafo block</p>
+        <span>Esto es un span inline</span>
+    </div>
+
+
+    <h2>Posicionamientos</h2>
+    static, relative, absolute, fixed, sticky
+    <div class="static">
+        <p>Esto es un parrafo static</p>
+    </div>
+    <div class="relative">
+        <p>Esto es un parrafo relative</p>
+    </div>
+    <div class="absolute">
+        <p>Esto es un parrafo absolute</p>
+    </div>
+    <div class="fixed">
+        <p>Esto es un parrafo fixed</p>
+    </div>
+    <div class="sticky">
+        <p>Esto es un parrafo sticky</p>
+    </div>
+
+
+    <h2>CSS</h2>
+
+    <p id="sample">Esto es un parrafo</p>
+
+    <h3>Pseudoclases</h3>
+
+    <ul class="pseudoclass">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+
+    <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus corrupti <br> velit ea ex unde quos debitis aperiam minus rerum maiores illum repudiandae nostrum officiis accusamus quasi sit ad nesciunt quisquam laboriosam, fuga recusandae alias sed similique! Nostrum tempore at dolorum dolor quo quasi enim, asperiores consectetur, pariatur ipsa quisquam qui.</p>
+
+    <div class="absolutas">
+        content
+    </div>
+
+    <div class="relativas">
+        content
+    </div>
+
+    <button id="js-button" type="button">add row</button>
+
+    <table id="js-table">
+        <thead>
+            <tr>
+                <th>title</th>
+                <th>desc</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>title 1</td>
+                <td>desc 1</td>
+            </tr>
+            <tr>
+                <td>title 2</td>
+                <td>desc 2</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script src="/clase_19/repaso.js"></script>
+    
+</body>
+</html>
