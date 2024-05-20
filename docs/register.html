@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/css/register.css">
+</head>
+<body>
+    <header class="header">
+
+        <nav>
+            <div id="logo">
+                <a href="./index.html">
+                    <span>Pelis</span>
+                </a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="">Tendencias</a></li>
+                <li><a href="">Registro</a></li>
+                <li><a href="">Docs</a></li>
+                <li><a href="" id="btn-cac" class="register-button">
+                    <span class="material-icons btn-icon">person</span> <span>Iniciar sesión</span>
+                    
+                </a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+        <section class="form-wrapper">
+            <h2 class="subtitle">Formulario de registro</h2>
+
+            <form action="" method="post" id="formRegister">
+                <div class="form-control">
+
+                    <label for="firstname">Nombre</label>
+                    <input type="text" name="firstname" id="firstname" >
+                </div>
+                <div class="form-error hidden">
+
+                    <span>Este campo es obligatorio</span>
+                </div>
+                <div class="form-control">
+
+                    <label for="lastname">Apellido</label>
+                    <input type="text" name="lastname" id="lastname" required>
+
+                </div>
+                <div class="form-control">
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="form-control">
+
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="password" id="password" >
+                </div>
+                <div class="form-control">
+                    <label for="birthdate" id="birthdate-label">Fecha de nacimiento</label>
+                    <input type="date" name="birthdate" id="birthdate" >
+                </div>
+                <div class="form-control">
+                    <label for="country">País</label>
+                    
+                    <select class="form-select" name="country" id="country">
+                        <option value="">Seleccione un país</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="brasil">Brasil</option>
+                        <option value="chile">Chile</option>
+                        <option value="colombia">Colombia</option>
+                        <option value="ecuador">Ecuador</option>
+                        <option value="paraguay">Paraguay</option>
+                        <option value="peru">Perú</option>
+                        <option value="uruguay">Uruguay</option>
+                        <option value="venezuela">Venezuela</option>
+                    </select>
+                </div>
+
+                <div class="form-control form-terms">
+                    <div class="terms">
+                        <input type="checkbox" name="terms" id="terms">
+
+                        <label for="terms">Acepto los términos y condiciones</label>
+                    </div>
+                </div>
+
+                <button type="submit">Registrarse</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+    <script src="./static/js/register.js"></script>
+
+</body>
+</html>
