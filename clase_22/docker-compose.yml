@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:14-alpine
+    container_name: cac_postgres
+    ports:
+      - 15432:5432
+    environment:
+      POSTGRES_PASSWORD: password
+  # volumes:
+  #   - ./postgres_data:/var/lib/postgresql/data
+
+  cac-sample:
+    image: cac-sample
+    container_name: cac-sample
+    ports:
+      - 3050:80
+    depends_on:
+      - postgres
+    # volumes:
+    #   - ./index.html:/usr/share/nginx/html/index.html
+
+networks:
+  default:
+    name: cac-sample
