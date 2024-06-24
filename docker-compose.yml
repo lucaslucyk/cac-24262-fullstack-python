@@ -35,6 +35,15 @@ services:
       - cac_pgadmin:/var/lib/pgadmin
     depends_on:
       - cac_postgres
+  
+  backend:
+    image: cac-24262-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cac_backend
+    ports:
+      - 5000:5000
 
   # cac_adminer:
   #   image: adminer
