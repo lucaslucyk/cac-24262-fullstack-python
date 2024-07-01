@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_file
 from psycopg2 import connect, extras
 
 
@@ -101,7 +101,26 @@ def get_movie(movie_id):
 
 @app.delete("/api/movies/<movie_id>")
 def delete_movie(movie_id):
-    return {"title": "Spiderman 2", "year": 2002, "id": movie_id}
+    # conectar a la bbdd
+    conn = get_connection()
+    # crear un cursor -- se encarga de ejecutar las queries
+    cursor = conn.cursor(cursor_factory=extras.RealDictCursor)
+
+    # ejecutar la query para obtener registros
+    cursor.execute(
+        query="DELETE FROM movies WHERE movie_id = %s RETURNING *", vars=(movie_id,)
+    )
+    movie = cursor.fetchone()
+    conn.commit()
+    # cerrar el cursor y la conexión
+    cursor.close()
+    conn.close()
+    
+    if movie is None:
+        return jsonify({"message": "Movie not found"}), 404
+
+    # retornar los resultados
+    return jsonify(movie)
 
 
 # PUT / PATCH
@@ -115,8 +134,8 @@ def update_movie_put(movie_id):
     return {"title": "Spiderman 2", "year": 2002, "id": movie_id}
 
 @app.get("/")
-def home(cursor):
-    return "Hello, World!"
+def home():
+    return send_file("static/index.html")
     
 
 
