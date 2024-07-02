@@ -1,3 +1,5 @@
+from base64 import b64encode
+import random
 from flask import Flask, jsonify, request, send_file
 from psycopg2 import connect, extras
 
@@ -136,7 +138,18 @@ def update_movie_put(movie_id):
 @app.get("/")
 def home():
     return send_file("static/index.html")
-    
+
+
+@app.route("/images", methods=["GET", "POST"])
+def images():
+
+    if request.method == "GET":
+        return send_file("static/images.html")
+
+    if request.method == "POST":
+        file = request.files["image"]
+        file.save(f'static/uploads/{file.name}.{file.filename.split(".")[-1]}')
+        return jsonify({"message": "ok"}), 200
 
 
 if __name__ == "__main__":
