@@ -42,6 +42,8 @@ services:
   #     context: .
   #     dockerfile: Dockerfile
   #   container_name: cac_backend
+  #   volumes:
+  #     - ./src/static:/app/static
   #   ports:
   #     - 5000:5000
 
