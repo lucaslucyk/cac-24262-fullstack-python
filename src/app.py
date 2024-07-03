@@ -1,19 +1,18 @@
 from base64 import b64encode
-import random
 from flask import Flask, jsonify, request, send_file
 from psycopg2 import connect, extras
-
+import os
 
 app = Flask(__name__)
 
 
 def get_connection():
     return connect(
-        host="localhost",
-        port=15432,
-        database="cac_app",
-        user="cac_app",
-        password="password",
+        host=os.environ.get("DB_HOST", "localhost"),
+        port=int(os.environ.get("DB_PORT", "15432")),
+        database=os.environ.get("DB_NAME", "cac_app"),
+        user=os.environ.get("DB_USER", "cac_app"),
+        password=os.environ.get("DB_PASSWORD", "password"),
     )
 
 
@@ -66,7 +65,7 @@ def create_movie():
     )
     movie = cursor.fetchone()
     conn.commit()
-    
+
     # cerrar el cursor y la conexión
     cursor.close()
     conn.close()
@@ -93,7 +92,7 @@ def get_movie(movie_id):
     # cerrar el cursor y la conexión
     cursor.close()
     conn.close()
-    
+
     if movie is None:
         return jsonify({"message": "Movie not found"}), 404
 
@@ -110,14 +109,15 @@ def delete_movie(movie_id):
 
     # ejecutar la query para obtener registros
     cursor.execute(
-        query="DELETE FROM movies WHERE movie_id = %s RETURNING *", vars=(movie_id,)
+        query="DELETE FROM movies WHERE movie_id = %s RETURNING *",
+        vars=(movie_id,),
     )
     movie = cursor.fetchone()
     conn.commit()
     # cerrar el cursor y la conexión
     cursor.close()
     conn.close()
-    
+
     if movie is None:
         return jsonify({"message": "Movie not found"}), 404
 
@@ -133,7 +133,52 @@ def update_movie(movie_id):
 
 @app.put("/api/movies/<movie_id>")
 def update_movie_put(movie_id):
-    return {"title": "Spiderman 2", "year": 2002, "id": movie_id}
+
+    movie_data = request.get_json()
+
+    # conectar a la bbdd
+    conn = get_connection()
+    # crear un cursor -- se encarga de ejecutar las queries
+    cursor = conn.cursor(cursor_factory=extras.RealDictCursor)
+
+    # ejecutar la query para obtener registros
+    query = """
+    UPDATE movies
+    SET
+        author_id = %s,
+        description = %s,
+        language = %s,
+        name = %s,
+        rating = %s,
+        release_date = %s
+    WHERE movie_id = %s
+    RETURNING *
+    """
+    cursor.execute(
+        query=query,
+        vars=(
+            movie_data["author_id"],
+            movie_data["description"],
+            movie_data["language"],
+            movie_data["name"],
+            movie_data["rating"],
+            movie_data["release_date"],
+            movie_id,
+        ),
+    )
+    movie = cursor.fetchone()
+    conn.commit()
+
+    # cerrar el cursor y la conexión
+    cursor.close()
+    conn.close()
+
+    if movie is None:
+        return jsonify({"message": "Movie not found"}), 404
+
+    # retornar los resultados
+    return jsonify(movie)
+
 
 @app.get("/")
 def home():

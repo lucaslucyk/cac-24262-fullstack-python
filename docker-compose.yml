@@ -36,16 +36,18 @@ services:
     depends_on:
       - cac_postgres
   
-  # backend:
-  #   image: cac-24262-backend
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile
-  #   container_name: cac_backend
-  #   volumes:
-  #     - ./src/static:/app/static
-  #   ports:
-  #     - 5000:5000
+  cac_backend:
+    image: cac-24262-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cac_backend
+    # volumes:
+    #   - ./src/static:/app/static
+    ports:
+      - 5000:8080
+    env_file:
+      - .env
 
   # cac_adminer:
   #   image: adminer

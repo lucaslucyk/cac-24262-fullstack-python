@@ -1,0 +1,11 @@
+wsgi -- sincronas
+asgi -- asincronas
+
+flask -- 
+
+gunicorn -- servidor wsgi
+    workers -- 
+        uvicorn -- worker para aplicaciones asgi
+
+
+gunicorn + uvicorn = correr aplicaciones asgi

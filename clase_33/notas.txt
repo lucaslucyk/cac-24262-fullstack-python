@@ -1,0 +1,20 @@
+-- backend
+
+GET /api/movies -> listado de peliculas
+POST /api/movies -> crear una nueva pelicula
+
+GET /api/movies/{id} -> Obtiene detalle de una película
+
+PATCH /api/movies/{id} -> actualizar una pelicula con datos opcionales
+PUT /api/movies/{id} -> actualizar una pelicula con todos los datos 
+
+DELETE /api/movies/{id} -> eliminar una pelicula
+
+
+-- front
+
+GET /movies -> listado de peliculas
+GET /movies/create -> formulario de creación
+GET /movies/{id} -> detalle de una película
+GET /movies/{id}/edit -> formulario de edición
+GET /movies/{id}/delete -> confirmación de eliminación
