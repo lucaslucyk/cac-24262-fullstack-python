@@ -7,6 +7,11 @@ app = Flask(__name__)
 
 
 def get_connection():
+
+    if os.environ.get("DATABASE_URL", None):
+        print(os.environ.get("DATABASE_URL"))
+        return connect(os.environ.get("DATABASE_URL"))
+
     return connect(
         host=os.environ.get("DB_HOST", "localhost"),
         port=int(os.environ.get("DB_PORT", "15432")),
