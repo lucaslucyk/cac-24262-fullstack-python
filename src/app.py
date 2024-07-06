@@ -197,9 +197,13 @@ def images():
         return send_file("static/images.html")
 
     if request.method == "POST":
-        file = request.files["image"]
-        file.save(f'static/uploads/{file.name}.{file.filename.split(".")[-1]}')
-        return jsonify({"message": "ok"}), 200
+        # file = request.files["image"]
+        # request.form.get("name")
+        # file.save(f'static/uploads/{file.name}.{file.filename.split(".")[-1]}')
+        # return jsonify({"message": "ok"}), 200
+
+        data = request.form.get("image")
+        return {"image": data}
 
 
 if __name__ == "__main__":

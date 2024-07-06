@@ -43,7 +43,7 @@ services:
       dockerfile: Dockerfile
     container_name: cac_backend
     volumes:
-      - ./src/static:/app/static
+      - ./src:/app
     ports:
       - 5000:8080
     env_file:
