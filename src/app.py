@@ -1,7 +1,8 @@
-from base64 import b64encode
 from flask import Flask, jsonify, request, send_file
 from psycopg2 import connect, extras
+from psycopg2.errors import UniqueViolation
 import os
+
 
 app = Flask(__name__)
 
@@ -47,7 +48,11 @@ def create_movie():
     movie_data = request.get_json()
 
     # conectar a la bbdd
-    conn = get_connection()
+    try:
+        conn = get_connection()
+    except:
+        return jsonify({"message": "Database connection error"}), 500
+
     # crear un cursor -- se encarga de ejecutar las queries
     cursor = conn.cursor(cursor_factory=extras.RealDictCursor)
 
@@ -57,29 +62,34 @@ def create_movie():
     VALUES (%s, %s, %s, %s, %s, %s)
     RETURNING *
     """
-    cursor.execute(
-        query=query,
-        vars=(
-            movie_data["author_id"],
-            movie_data["description"],
-            movie_data["language"],
-            movie_data["name"],
-            movie_data["rating"],
-            movie_data["release_date"],
-        ),
-    )
-    movie = cursor.fetchone()
-    conn.commit()
 
-    # cerrar el cursor y la conexión
-    cursor.close()
-    conn.close()
+    try:
+        cursor.execute(
+            query=query,
+            vars=(
+                movie_data["author_id"],
+                movie_data["description"],
+                movie_data["language"],
+                movie_data["name"],
+                movie_data["rating"],
+                movie_data["release_date"],
+            ),
+        )
+        movie = cursor.fetchone()
+        conn.commit()
 
-    if movie is None:
-        return jsonify({"message": "Movie not created"}), 400
+        if movie is None:
+            return jsonify({"message": "Movie not created"}), 400
 
-    # retornar los resultados
-    return jsonify(movie), 201
+        # retornar los resultados
+        return jsonify(movie), 201
+    except UniqueViolation as err:
+        return jsonify({"message": "Movie already exists"}), 409
+
+    finally:
+        # cerrar el cursor y la conexión
+        cursor.close()
+        conn.close()
 
 
 @app.get("/api/movies/<movie_id>")

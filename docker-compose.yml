@@ -9,8 +9,10 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
+      POSTGRES_DB: cac_app
     volumes:
       - cac_postgres:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
   # cac_mysql:
   #   image: mysql:5.7
@@ -43,11 +45,11 @@ services:
       dockerfile: Dockerfile
     container_name: cac_backend
     volumes:
-      - ./src/static:/app/static
+      - ./src:/app
     ports:
       - 5000:8080
     env_file:
-      - .env
+      - docker.env
 
   # cac_adminer:
   #   image: adminer

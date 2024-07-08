@@ -82,6 +82,11 @@ moviesForm.addEventListener("submit", async (event) => {
   });
   const data = await response.json();
 
+  if (response.status >= 400) {
+    alert(data.message)
+    return
+  }
+
   if (movieId !== "") {
     rmMovieRow(data.movie_id);
   }
