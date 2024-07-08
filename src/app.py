@@ -3,6 +3,10 @@ from psycopg2 import connect, extras
 from psycopg2.errors import UniqueViolation
 import os
 
+from pydantic import ValidationError
+
+from models import Movie
+
 
 app = Flask(__name__)
 
@@ -47,6 +51,11 @@ def create_movie():
 
     movie_data = request.get_json()
 
+    try:
+        valid_data = Movie.model_validate(movie_data)
+    except ValidationError as e:
+        return jsonify({"message": e.errors() }), 400
+
     # conectar a la bbdd
     try:
         conn = get_connection()
@@ -67,12 +76,19 @@ def create_movie():
         cursor.execute(
             query=query,
             vars=(
-                movie_data["author_id"],
-                movie_data["description"],
-                movie_data["language"],
-                movie_data["name"],
-                movie_data["rating"],
-                movie_data["release_date"],
+                valid_data.author_id,
+                valid_data.description,
+                valid_data.language,
+                valid_data.name,
+                valid_data.rating,
+                valid_data.release_date,
+                
+                # movie_data["author_id"],
+                # movie_data["description"],
+                # movie_data["language"],
+                # movie_data["name"],
+                # movie_data["rating"],
+                # movie_data["release_date"],
             ),
         )
         movie = cursor.fetchone()
@@ -83,7 +99,7 @@ def create_movie():
 
         # retornar los resultados
         return jsonify(movie), 201
-    except UniqueViolation as err:
+    except UniqueViolation:
         return jsonify({"message": "Movie already exists"}), 409
 
     finally:
